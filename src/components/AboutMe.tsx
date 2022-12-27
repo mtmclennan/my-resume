@@ -3,7 +3,7 @@ import { about } from "../data";
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className="section">
       <h3>About Me</h3>
       <p>{about}</p>
     </div>

@@ -26,7 +26,7 @@ export const contact = {
 };
 
 export const about =
-  "best solution driven software developer.  Passionate about building high-quality applications. Complex Problem solver, with a thrust for knowledge.  Always looking to learn new technologies. ";
+  "best solution driven software developer.  Passionate about building high-quality applications. Complex Problem solver, with a thurst for knowledge.  Always looking to learn new technologies. ";
 
 export type Contact = typeof contact;
 

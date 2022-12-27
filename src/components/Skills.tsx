@@ -5,6 +5,7 @@ const Skills = ({ data }: { data: Data }) => {
   return (
     <div className="skills">
       <div>
+        <h2>Skills</h2>
         <h3>Languages</h3>
         <ul>
           {data.languages.map((item: string) => (
