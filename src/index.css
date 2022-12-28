@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #1864ab;
+
+  --text-color-dark: #495057;
+  --text-color-mid: #adb5bd;
+  --text-color-light: #f8f9fa;
+}
+
 body {
   margin: 0;
   font-family: inter, sans-serif, sans-serif;
@@ -6,6 +14,7 @@ body {
 }
 
 * {
+  margin: 0;
   text-decoration: none;
 }
 
@@ -16,6 +25,7 @@ li {
 h2,
 h3 {
   text-align: center;
+  margin: 0;
 }
 
 code {
@@ -26,7 +36,6 @@ code {
 .container {
   display: flex;
   padding: 3rem;
-
   justify-content: center;
   align-items: center;
 }
@@ -49,21 +58,21 @@ code {
   display: flex;
   border-radius: 10px 0 0 10px;
   flex-direction: column;
-  background-color: darkgray;
+  background-color: var(--primary-color);
   height: 100%;
-  /* width: 33%; */
   justify-content: center;
   align-items: center;
 }
 
 .skills {
+  display: flex;
+  flex-direction: column;
   height: 80%;
   width: 100%;
-  background-color: cornflowerblue;
+  color: var(--text-color-light);
 }
 
 .logo-container {
-  height: 30%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -91,13 +100,14 @@ code {
 .section {
   /* border-bottom: 1px solid #777; */
   padding: 1rem;
+  margin: 1rem;
 }
 
 .section::after,
 .logo-container::after {
   content: "";
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   background: #777;
   width: 90%;
   height: 1px;
@@ -105,4 +115,37 @@ code {
 
 .section h3 {
   text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section ul {
+  line-height: 1.75rem;
+}
+
+.heading-box {
+  max-width: fit-content;
+  align-self: center;
+  padding: 0.25rem 2rem;
+  border: 2px solid var(--text-color-mid);
+  margin: 1rem;
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem;
+}
+
+.skills__container ul {
+  line-height: 1.5rem;
+}
+
+.skills h3 {
+  border-bottom: 1px solid var(--text-color-mid);
+  margin-bottom: 0.25rem;
+}
+
+.main {
+  color: var(--text-color-dark);
 }

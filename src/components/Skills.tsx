@@ -4,8 +4,8 @@ import { Data } from "../data";
 const Skills = ({ data }: { data: Data }) => {
   return (
     <div className="skills">
-      <div>
-        <h2>Skills</h2>
+      <div className="skills__container">
+        <h2 className="heading-box">Skills</h2>
         <h3>Languages</h3>
         <ul>
           {data.languages.map((item: string) => (
@@ -13,7 +13,7 @@ const Skills = ({ data }: { data: Data }) => {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="skills__container">
         <h3>Technologies</h3>
         <ul>
           {data.tech.map((item: string) => (

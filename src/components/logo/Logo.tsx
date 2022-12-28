@@ -5,10 +5,10 @@ const Logo = () => {
   return (
     <div className={classes.container}>
       <div className={classes.letterContainer}>
-        <h1>M</h1>
+        <h1>Matthew</h1>
       </div>
       <div className={classes.letterContainer}>
-        <h1>M</h1>
+        <h1>McLennan</h1>
       </div>
     </div>
   );

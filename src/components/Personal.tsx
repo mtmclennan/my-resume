@@ -1,39 +1,37 @@
 import React from "react";
 import { address, contact } from "../data";
 import IconButton from "../UI/IconButton";
-import {
-  LocationOutline,
-  CallOutline,
-  AtCircleOutline,
-  LogoLinkedin,
-  LogoGithub,
-} from "react-ionicons";
+import IonIcon from "@reacticons/ionicons";
 
 const Personal = () => {
   return (
     <div className="section">
-      <h3>Software Devoloper</h3>
+      <h3 className="heading-box">Software Devoloper</h3>
       <ul>
         <li>
-          <LocationOutline />
+          <IonIcon name="location-outline" />
           {`${address.number} ${address.street}, ${
             address.city
           }, ${address.province.slice(0, 2).toUpperCase()}`}
         </li>
         <li>
-          <CallOutline />
+          <IonIcon name="locate-outline" />
           {contact.phone}
         </li>
         <li>
-          <AtCircleOutline />
+          <IonIcon name="at-circle-outline" />
+
           {contact.email}
         </li>
         <li>
-          <LogoLinkedin />
+          <IonIcon name="logo-linkedin" />
           {contact.linkedin}
         </li>
         <li>
-          <IconButton url={contact.github} icon={<LogoGithub />}>
+          <IconButton
+            url={contact.github}
+            icon={<IonIcon name="logo-github" />}
+          >
             GitHub
           </IconButton>
         </li>

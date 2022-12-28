@@ -4,7 +4,7 @@ import { about } from "../data";
 const AboutMe = () => {
   return (
     <div className="section">
-      <h3>About Me</h3>
+      <h3 className="heading-box">About Me</h3>
       <p>{about}</p>
     </div>
   );

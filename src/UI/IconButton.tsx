@@ -1,5 +1,4 @@
 import React from "react";
-import { LogoGithub } from "react-ionicons";
 
 const IconButton = ({
   url,
