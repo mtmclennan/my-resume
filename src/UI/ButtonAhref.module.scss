@@ -1,0 +1,49 @@
+@use "../sass/abstracts/variables" as v;
+@use "../sass/abstracts/mixins" as m;
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-width: 10.5rem;
+  text-decoration: none;
+
+  // margin-inline: auto;
+  border: 2px solid v.$primary-color;
+  border-radius: 5px;
+
+  background-color: v.$background-color;
+  font-size: 1.4rem;
+
+  @include m.PrintStyle() {
+    font-size: 1.2rem;
+  }
+
+  & a {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: v.$text-color-light;
+    letter-spacing: 0.1rem;
+    display: flex;
+    width: 100%;
+    @include m.PrintStyle() {
+      padding: 0.2rem;
+    }
+  }
+
+  &:hover {
+    background-color: v.$primary-color;
+    border-color: v.$background-color;
+    & a {
+      color: v.$background-color;
+    }
+  }
+
+  & span {
+    margin-right: 0.5rem;
+  }
+
+  @include m.PrintStyle() {
+    print-color-adjust: exact;
+  }
+}

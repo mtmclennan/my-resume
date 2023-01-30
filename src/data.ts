@@ -1,5 +1,5 @@
 export const data = {
-  languages: ["JavaScript", "TypeScript", "HTML", "CSS"],
+  languages: ["JavaScript", "TypeScript", "HTML", "CSS, SASS"],
   tech: [
     "ReactJS",
     "NodeJS / ExpressJS",
@@ -21,12 +21,12 @@ export const address = {
 export const contact = {
   email: "mtmclennan@gmail.com",
   phone: "226-338-8443",
-  linkedin: "www.linkedin.com/in/matthew-mclennan-bb2655253",
+  linkedin: "https://linkedin.com/in/matthew-mclennan-dev",
   github: "https://github.com/mtmclennan",
 };
 
 export const about =
-  "best solution driven software developer.  Passionate about building high-quality applications. Complex Problem solver, with a thurst for knowledge.  Always looking to learn new technologies. ";
+  "Hello,  my name is Matt; I am a self-taught full-stack developer passionate about building dynamic and user-friendly web applications using ReactJS and NodeJS / ExpressJS.  I am a very analytical and logical individual who excels at strategic planning and complex problem-solving.  Although I am new to the industry, I am highly motivated and dedicated to learning and staying up-to-date with the latest technologies. My strong desire to build and improve innovative software will make me an asset to any team";
 
 export type Contact = typeof contact;
 

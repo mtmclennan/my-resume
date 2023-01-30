@@ -1,0 +1,51 @@
+@use "../../sass/abstracts/mixins" as m;
+@use "../../sass/abstracts/variables" as v;
+
+.container {
+  @include m.flexCenter(column);
+
+  & p {
+    padding: 0 1rem 0.5rem 2rem;
+  }
+  & button {
+    margin-top: 1rem;
+  }
+  &::after {
+    @include m.underlineAfter();
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  margin-top: 0.25rem;
+  max-width: 15rem;
+  & img {
+    width: 3rem;
+  }
+
+  & h3 {
+    font-family: "Oswald", sans-serif;
+  }
+
+  & a {
+    @include m.flexCenter();
+    color: v.$text-color-dark;
+  }
+}
+
+.preview {
+  width: 35rem;
+  margin: 1rem;
+
+  @include m.PrintStyle() {
+    width: 15rem;
+  }
+}
+
+.btnContainer {
+  @include m.flexCenter();
+  gap: 1rem;
+}

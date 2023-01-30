@@ -1,0 +1,21 @@
+@mixin flexCenter($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin underlineAfter {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  background: #777;
+  width: 90%;
+  height: 1px;
+}
+
+@mixin PrintStyle {
+  @media print {
+    @content;
+  }
+}

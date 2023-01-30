@@ -1,24 +1,23 @@
 import React from "react";
+import classes from "./ButtonAhref.module.scss";
 
-const IconButton = ({
+const ButtonAhef = ({
   url,
   icon,
   children,
 }: {
   url: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   children: React.ReactNode;
 }) => {
   return (
-    <div>
+    <div className={classes.btn}>
       <a href={url} target="_blank" rel="noreferrer">
-        <button className="btn btn_icon">
-          {icon}
-          {children}
-        </button>
+        {icon}
+        {children}
       </a>
     </div>
   );
 };
 
-export default IconButton;
+export default ButtonAhef;
