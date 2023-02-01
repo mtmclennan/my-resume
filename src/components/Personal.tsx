@@ -6,7 +6,7 @@ import IonIcon from "@reacticons/ionicons";
 const Personal = () => {
   return (
     <div className="section">
-      <h3 className="heading-box">Software Devoloper</h3>
+      <h3 className="heading-box">Software Developer</h3>
       <ul className="personal">
         <li>
           <ButtonAhef
@@ -15,23 +15,23 @@ const Personal = () => {
           >
             Address
           </ButtonAhef>
-
-          {/* <span>
+          {/* 
+          <span>
             {`${address.number} ${address.street}, ${
               address.city
             }, ${address.province.slice(0, 2).toUpperCase()}`}
           </span> */}
           <span>Cambridge, Ontario, Canada</span>
         </li>
-        <li>
-          {/* <ButtonAhef
+        {/* <li>
+          <ButtonAhef
             icon={<IonIcon name="call-outline" className="icon" />}
             url={`tel:${contact.phone}`}
           >
             Call Me
           </ButtonAhef>
-          <span>{contact.phone}</span> */}
-        </li>
+          <span>{contact.phone}</span>
+        </li> */}
         <li>
           <ButtonAhef
             icon={<IonIcon name="at-circle-outline" />}

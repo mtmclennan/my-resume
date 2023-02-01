@@ -1,12 +1,16 @@
 import React from "react";
-import classes from "./Logo.module.css";
+import classes from "./Logo.module.scss";
 import logo from "../../assets/images/logo-no-background.png";
 
-const Logo = () => {
+const Logo = ({ size }: { size?: "small" | undefined }) => {
+  const containerClass =
+    size === "small" ? classes.containerSmall : classes.container;
   return (
-    <div className={classes.container}>
-      <img src={logo} alt="Matthew McLennan" />
-    </div>
+    <a href="https://mtmclennan.github.io/my-resume/">
+      <div className={containerClass}>
+        <img src={logo} alt="Matthew McLennan" />
+      </div>
+    </a>
   );
 };
 

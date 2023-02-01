@@ -5,13 +5,17 @@ const ButtonAhef = ({
   url,
   icon,
   children,
+  nav,
 }: {
   url: string;
   icon?: React.ReactNode;
   children: React.ReactNode;
+  nav?: true | undefined;
 }) => {
+  const linkClass = nav ? `${classes.btn} ${classes.navBtn}` : classes.btn;
+
   return (
-    <div className={classes.btn}>
+    <div className={linkClass}>
       <a href={url} target="_blank" rel="noreferrer">
         {icon}
         {children}

@@ -49,3 +49,10 @@
   @include m.flexCenter();
   gap: 1rem;
 }
+
+.flex {
+  @include m.PrintStyle() {
+    @include m.flexCenter();
+    gap: 3rem;
+  }
+}

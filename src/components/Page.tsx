@@ -5,7 +5,7 @@ import Personal from "./Personal";
 import Project from "./projects/Project";
 import SideBar from "./SideBar";
 import previewPP from "../assets/images/PP-preview.png";
-import previewEM from "../assets/images/edgeinmindpreview.png";
+import previewEM from "../assets/images/edgeinmindpreview-scale.png";
 import PPLogo from "../assets/images/PPlogoonly.png";
 
 const Page = ({ data }: { data: Data }) => {

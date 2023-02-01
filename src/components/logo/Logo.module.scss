@@ -1,0 +1,21 @@
+@use "../../sass/abstracts/mixins" as m;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  color: #f8f9fa;
+}
+
+.containerSmall {
+  display: flex;
+  flex-direction: column;
+  // height: 15rem;
+  width: 20rem;
+  margin-left: 4rem;
+
+  @include m.PrintStyle() {
+    margin-right: -4rem;
+    margin-left: 0;
+  }
+}

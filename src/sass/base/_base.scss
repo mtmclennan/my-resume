@@ -187,3 +187,47 @@ code {
     margin-top: 0.25rem;
   }
 }
+
+.letter__container {
+  padding: 10rem 7rem;
+  & div {
+    // letter-spacing: ;
+    line-height: 1.5;
+  }
+
+  @include m.PrintStyle() {
+    padding: 7rem 10rem;
+  }
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  background-color: v.$background-color;
+}
+
+.top-bar__nav-container {
+  margin: auto;
+}
+
+.top-bar__nav {
+  @include m.flexCenter;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  & a {
+    border-radius: 0px;
+  }
+}
+
+.top-bar__personal {
+  @include m.flexCenter();
+  margin-bottom: -3rem;
+  color: v.$text-color-mid;
+  gap: 3rem;
+
+  @include m.PrintStyle() {
+    gap: 1rem;
+    font-size: 1.4rem;
+  }
+}
