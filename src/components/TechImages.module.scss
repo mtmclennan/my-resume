@@ -1,0 +1,48 @@
+@use "../sass/abstracts/mixins" as m;
+@use "../sass/abstracts/variables" as v;
+
+.container {
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+  & ul {
+    @include m.flexCenter();
+    gap: 5rem;
+  }
+
+  & img {
+    max-height: 10rem;
+  }
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 150%;
+  animation: slideshow 30s linear infinite;
+  background-color: v.$primary-color;
+
+  & li {
+    padding: 2rem;
+    @include m.flexCenter();
+    min-width: 20rem;
+    background-color: v.$background-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -2px #0000006e;
+    box-shadow: 5px 5px 15px -2px #0000006c;
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}

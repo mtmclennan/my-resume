@@ -1,0 +1,104 @@
+@use "../sass/abstracts/variables" as v;
+@use "../sass/abstracts/mixins" as m;
+
+.header {
+  width: 100%;
+  position: relative;
+  height: 5rem;
+  padding: 0 2%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: v.$background-color;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.116);
+  /* box-shadow: 10px 3px 10px 0px #888888; */
+  @include m.PrintStyle() {
+    display: none;
+  }
+}
+
+.linksLarger {
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  height: 5rem;
+  font-weight: 500;
+  color: v.$text-color-dark;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  cursor: pointer;
+  & img,
+  a {
+    height: 90%;
+  }
+}
+
+.header h1 {
+  color: v.$primary-color;
+}
+
+.header ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+
+.header li {
+  margin: 1em;
+}
+
+.header a:hover {
+  display: block;
+  color: v.$primary-color;
+  transform: scale(1.04);
+  transition: all 0.2s ease;
+}
+
+.header button {
+  padding: 0.75rem 1rem;
+  flex-grow: 0;
+  color: v.$text-color-dark;
+  background-color: v.$primary-color;
+
+  border-width: 1px;
+  font-weight: 400;
+  /* border-radius: 10px; */
+  transition: all 0.2s ease;
+}
+
+.header button:hover {
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  transform: scale(1.05);
+  border-color: var(--color-primary-dark);
+}
+
+.actionContainer {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .header ul {
+    display: flex;
+  }
+
+  .actionContainer {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .header ul,
+  .actionContainer {
+    display: none;
+  }
+}

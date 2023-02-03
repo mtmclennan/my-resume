@@ -1,14 +1,36 @@
-import Page from "./components/Page";
 import { data } from "./data";
-import CoverLetter from "./pages/CoverLetter";
 import "./sass/main.scss";
+import LoadingSpinner from "./UI/LoadingSpinner";
+import { Fragment, lazy, Suspense } from "react";
+import { Outlet, Route, Routes } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+
+// const Home = lazy(() => import("./pages/Home"));
+const Resume = lazy(() => import("./pages/Resume"));
+const Letter = lazy(() => import("./pages/CoverLetter"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
-    <div className="container">
-      <Page data={data} />
-      {/* <CoverLetter /> */}
-    </div>
+    <Fragment>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route
+            element={
+              <Layout>
+                <Outlet />
+              </Layout>
+            }
+          >
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume data={data} />} />
+            <Route path="/letter" element={<Letter />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </Fragment>
   );
 }
 

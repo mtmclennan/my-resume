@@ -43,7 +43,9 @@ code {
 .page {
   display: grid;
   width: 900px;
-  border-radius: 10px;
+
+  margin: 2rem auto;
+
   height: 1472px;
   box-shadow: 2px 9px 21px 5px rgba(0, 0, 0, 0.39);
 
@@ -64,7 +66,7 @@ code {
 
 .side-bar {
   @include m.flexCenter(column);
-  border-radius: 10px 0 0 10px;
+  // border-radius: 10px 0 0 10px;
   background-color: v.$background-color;
 
   height: 100%;
@@ -230,4 +232,110 @@ code {
     gap: 1rem;
     font-size: 1.4rem;
   }
+}
+
+.hero__container {
+  // @include m.flexCenter(column);
+  // height: 100vh;
+}
+
+.hero {
+  height: 70vh;
+
+  @include m.flexCenter();
+  justify-content: space-evenly;
+  color: v.$text-color-mid;
+  background-color: v.$background-color;
+}
+
+.hero__content {
+  height: 50vh;
+  // width: 30vw;
+  color: v.$text-color-light;
+  // @include m.flexCenter(column);
+  // // text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & h1 {
+    font-size: 4.5rem;
+    letter-spacing: 0.1rem;
+  }
+  & h3 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  & p {
+    margin: 3rem 0;
+  }
+}
+
+.btnContainer {
+  @include m.flexCenter();
+  gap: 3rem;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  max-width: 14rem;
+  // min-width: 10.5rem;
+  text-decoration: none;
+  border: 2px solid v.$primary-color;
+  // border-radius: 5px;
+  background-color: v.$primary-color;
+  font-size: 1.6rem;
+
+  @include m.PrintStyle() {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background-color: v.$background-color;
+    transform: scale(1.05);
+    -webkit-box-shadow: 5px 5px 15px 5px v.$color-shadow;
+    box-shadow: 5px 5px 15px 5px v.$color-shadow;
+    border-color: v.$primary-color;
+    color: v.$text-color-light;
+  }
+
+  @include m.PrintStyle() {
+    print-color-adjust: exact;
+  }
+
+  padding: 1rem;
+  color: v.$text-color-light;
+  letter-spacing: 0.1rem;
+  @include m.flexCenter();
+  // justify-content: flex-start;
+  width: 100%;
+  @include m.PrintStyle() {
+    padding: 0.5rem;
+  }
+}
+
+.nav__btn {
+  text-decoration: none;
+  color: v.$text-color-light;
+  letter-spacing: 0.25rem;
+}
+
+.active {
+  position: relative;
+}
+.active::after {
+  content: "";
+  /* border: 1px solid #be3939; */
+  position: absolute;
+  height: 1px;
+  background: v.$primary-color;
+  bottom: -4px;
+  // border-radius: 6px;s
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
 }

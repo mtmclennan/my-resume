@@ -1,3 +1,29 @@
+import reactLogo from "./assets/images/React_logo_wordmark-700x235.png";
+import reduxLogo from "./assets/images/icons8-redux-480.png";
+import expressLogo from "./assets/images/icons8-express-js-250.png";
+import nodeLogo from "./assets/images/icons8-node-js-240.png";
+import tsLogo from "./assets/images/icons8-typescript-480.png";
+import jsLogo from "./assets/images/icons8-javascript-480.png";
+import nextLogo from "./assets/images/Next.js Logo Vector.png";
+import mongodbLogo from "./assets/images/icons8-mongodb-480.png";
+import sassLogo from "./assets/images/icons8-sass-480.png";
+import gitLogo from "./assets/images/icons8-git-480.png";
+import cssLogo from "./assets/images/icons8-css3-480.png";
+
+export const techLogos = [
+  reactLogo,
+  reduxLogo,
+  expressLogo,
+  nodeLogo,
+  nextLogo,
+  tsLogo,
+  jsLogo,
+  mongodbLogo,
+  sassLogo,
+  cssLogo,
+  gitLogo,
+];
+
 export const data = {
   languages: ["JavaScript", "TypeScript", "HTML", "CSS, SASS"],
   tech: [
