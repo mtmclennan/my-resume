@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/949.3864cd14.chunk.js","mappings":"uIAMA,UAJiB,WACf,OAAO,+CACT,C","sources":["pages/NotFound.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nconst NotFound = () => {\r\n  return <div>404 Page not found</div>;\r\n};\r\n\r\nexport default NotFound;\r\n"],"names":[],"sourceRoot":""}
