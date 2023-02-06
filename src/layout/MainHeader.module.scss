@@ -102,3 +102,19 @@
     display: none;
   }
 }
+
+.social {
+  @include m.flexCenter();
+  margin-right: 2rem;
+  & ul {
+    gap: 2rem;
+  }
+  & li {
+    margin: 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: v.$text-color-light;
+  }
+}

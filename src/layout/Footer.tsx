@@ -1,6 +1,7 @@
 import classes from "./Footer.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/logo-no-background.png";
+import SocialLinks from "../components/SocialLinks";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -59,8 +60,10 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+      <SocialLinks className={classes.social} />
       <div className={classes.copyright}>
         <p>{`©${year} By Me`}</p>
+        <Link to="https://icons8.com">Logos by Icons8</Link>
       </div>
     </footer>
   );

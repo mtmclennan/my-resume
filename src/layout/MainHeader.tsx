@@ -1,22 +1,11 @@
 import classes from "./MainHeader.module.scss";
 
-import { useMatch, NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Fragment } from "react";
 import logo from "../assets/images/mlogo-no-background.png";
+import SocialLinks from "../components/SocialLinks";
 
 const MainHeader = () => {
-  // const matches = useMatch('/');
-  // const [showMobileMenu, setShowMobileMenu] = useState(false);
-  // const currentRoute = matches.pathname;
-
-  // const homeClassName = useMatch("/") ? "active" : "non-active";
-  // const coverLetterClassName = useMatch("/blog") ? "active" : "non-active";
-  // const resumeClassName = useMatch("/contact") ? "active" : "non-active";
-
-  // useEffect(() => {
-  //   setShowMobileMenu(false);
-  // }, [currentRoute]);
-
   return (
     <Fragment>
       <header className={classes.header}>
@@ -57,33 +46,11 @@ const MainHeader = () => {
                 Resume
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink to="/about">
-                <a className={aboutClassname}>About</a>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">
-                <a className={contactClassname}>Contact</a>
-              </NavLink>
-            </li> */}
           </ul>
 
-          {/* <Hamburger
-            showMenu={showMobileMenu}
-            setShowMenu={setShowMobileMenu}
-          /> */}
+          <SocialLinks className={classes.social} logos="only" />
         </nav>
       </header>
-      {/* {showMobileMenu && (
-        <MobileMenu
-          homeClassname={homeClassname}
-          blogClassname={blogClassname}
-          aboutClassname={aboutClassname}
-          contactClassname={contactClassname}
-          toolsClassname={toolsClassname}
-        />
-      )} */}
     </Fragment>
   );
 };

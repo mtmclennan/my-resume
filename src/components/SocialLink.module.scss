@@ -1,0 +1,16 @@
+@use "../sass/abstracts/mixins" as m;
+
+.item {
+  & a {
+    @include m.flexCenter();
+    gap: 1rem;
+  }
+
+  & div {
+    @include m.flexCenter();
+  }
+}
+
+.linked {
+  font-size: 2rem;
+}

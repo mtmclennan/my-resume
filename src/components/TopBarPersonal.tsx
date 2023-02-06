@@ -7,11 +7,11 @@ const TopBarPersonal = () => {
     <ul className="top-bar__personal">
       <li>
         <span>
-          {`${address.number} ${address.street}, ${
+          {/* {`${address.number} ${address.street}, ${
             address.city
-          }, ${address.province.slice(0, 2).toUpperCase()}`}
+          }, ${address.province.slice(0, 2).toUpperCase()}`} */}
         </span>
-        {/* <span>Cambridge, Ontario, Canada</span> */}
+        <span>Cambridge, Ontario, Canada</span>
       </li>
       |
       <li>

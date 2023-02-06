@@ -12,6 +12,7 @@
 
   & img {
     max-height: 10rem;
+    max-width: 15rem;
   }
 }
 
@@ -20,7 +21,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 150%;
+  width: 200%;
   animation: slideshow 30s linear infinite;
   background-color: v.$primary-color;
 
@@ -28,6 +29,7 @@
     padding: 2rem;
     @include m.flexCenter();
     min-width: 20rem;
+    min-height: 15rem;
     background-color: v.$background-color;
     border-radius: 5px;
     -webkit-box-shadow: 5px 5px 15px -2px #0000006e;
@@ -40,7 +42,7 @@
     left: 0;
   }
   50% {
-    left: -50%;
+    left: -100%;
   }
   100% {
     left: 0;

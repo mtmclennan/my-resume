@@ -9,8 +9,12 @@ const Hero = () => {
         <div className="hero__content">
           <h3>Hello!</h3>
           <h1>I'm Matt,</h1>
-          <h1>Software Developer</h1>
-          <p>For more information about me, please visit the links below</p>
+          <h1>FullStack Developer</h1>
+          <p>
+            I have a passion for building, and improving MERN stack
+            applications. <br /> Start here to learn more about me, and why you
+            should hire me.
+          </p>
           <div className="btnContainer">
             <Link className="btn" to="/letter">
               Let's Talk
