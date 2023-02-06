@@ -1,8 +1,11 @@
+@use "../sass/abstracts/variables" as v;
+
 .ham {
-  width: 2.5rem;
-  margin: auto 1em auto;
-  right: 1em;
-  height: 2.5rem;
+  width: 4.5rem;
+  position: fixed;
+  right: 2rem;
+  top: 0.75rem;
+  height: 3.5rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -20,12 +23,16 @@
 .midBarOpen,
 .bottomBarOpen {
   height: 5px;
-  background-color: var(--color-primary);
+  background-color: v.$text-color-light;
   border-radius: 5px;
-  width: 2.5rem;
+  width: 3.5rem;
   transform-origin: left;
   margin: 3px 0;
   transition: all 0.5s ease-in-out;
+}
+
+.midBar {
+  width: 4.2rem;
 }
 
 .topBarOpen {

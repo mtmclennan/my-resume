@@ -1,0 +1,48 @@
+@use "../sass/abstracts/variables" as v;
+@use "../sass/abstracts/mixins" as m;
+
+.menu,
+.menuHidden {
+  height: 100vh;
+  width: 80vw;
+  min-width: 35rem;
+  position: fixed;
+  right: 0;
+  @include m.flexCenter(column);
+  justify-content: space-between;
+  gap: 3rem;
+  transition: all 0.5s ease-in-out;
+  background-color: #343a40;
+  z-index: 100;
+  @include m.mediaDesktop {
+    display: none;
+  }
+  // transform: translateX(-10%);
+}
+
+.menu {
+  // right: 0;
+  transform: translateX(0);
+}
+
+.menuHidden {
+  // width: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.link {
+  margin-top: 3rem;
+}
+
+.link a {
+  margin-left: 3em;
+  font-size: 2rem;
+  color: v.$text-color-light;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+.link:nth-child(4) {
+  margin-bottom: 3rem;
+}

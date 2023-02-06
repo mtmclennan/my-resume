@@ -30,6 +30,10 @@ code {
     monospace;
 }
 
+#root {
+  position: relative;
+}
+
 .container {
   @include m.flexCenter();
   padding: 3rem;
@@ -235,25 +239,32 @@ code {
 }
 
 .hero__container {
-  // @include m.flexCenter(column);
+  @include m.flexCenter(column);
+  // margin-top: 5rem;
+  // height: fit-content;
   // height: 100vh;
 }
 
 .hero {
   height: 70vh;
-
+  width: 100%;
   @include m.flexCenter();
   justify-content: space-evenly;
   color: v.$text-color-mid;
   background-color: v.$background-color;
+
+  @include m.mediaUpToDesktop {
+    flex-direction: column;
+  }
+  @include m.mediaPhone {
+    height: fit-content;
+  }
 }
 
 .hero__content {
-  height: 50vh;
-  // width: 30vw;
+  padding: 2rem;
   color: v.$text-color-light;
-  // @include m.flexCenter(column);
-  // // text-align: center;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,6 +281,11 @@ code {
   & p {
     margin: 3rem 0;
     line-height: 1.5;
+  }
+
+  @include m.mediaPhone {
+    height: fit-content;
+    text-align: center;
   }
 }
 

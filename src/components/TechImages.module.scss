@@ -21,9 +21,13 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 200%;
+  width: 340rem;
   animation: slideshow 30s linear infinite;
   background-color: v.$primary-color;
+
+  @include m.mediaPhone {
+    animation: slideShowMobile 30s linear infinite;
+  }
 
   & li {
     padding: 2rem;
@@ -42,7 +46,19 @@
     left: 0;
   }
   50% {
-    left: -100%;
+    left: -150rem;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideShowMobile {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -300rem;
   }
   100% {
     left: 0;

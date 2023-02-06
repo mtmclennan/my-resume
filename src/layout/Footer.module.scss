@@ -36,19 +36,24 @@
 }
 
 .copyright {
-  margin: 1em;
+  margin: 1rem;
   align-self: center;
   justify-self: center;
   color: v.$text-color-mid;
+  grid-row: 3/4;
+  grid-column: 1/4;
 
   & a {
     text-decoration: none;
+    margin-top: 1rem;
     color: v.$text-color-mid;
+    font-size: 1.2rem;
   }
 }
 
 .logo {
   grid-row: 2/3;
+  grid-column: 1/ 4;
   margin: auto;
   & img {
     height: 100%;
