@@ -1,0 +1,7 @@
+@use "../sass/abstracts/mixins" as m;
+
+.container {
+  @include m.mediaUpToDesktop {
+    margin-top: 5rem;
+  }
+}

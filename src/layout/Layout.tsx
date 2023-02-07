@@ -1,7 +1,7 @@
 // import Footer from "./Footer";
 import { Fragment, ReactNode } from "react";
 import Footer from "./Footer";
-import classes from "./Layout.module.css";
+import classes from "./Layout.module.scss";
 import MainHeader from "./MainHeader";
 
 type LayoutProps = {

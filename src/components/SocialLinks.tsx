@@ -12,7 +12,7 @@ interface SocialItemProps {
 
 const SocialItem = ({ link, icon, title }: SocialItemProps) => (
   <li className={classes.item}>
-    <Link to={link}>
+    <Link to={link} target={"_blank"}>
       {title}
       {icon}
     </Link>
